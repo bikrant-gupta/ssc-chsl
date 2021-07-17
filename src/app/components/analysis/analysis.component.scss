@@ -1,0 +1,98 @@
+@import '../exam-page/exam-page.component.scss';
+
+th{
+    border:1px solid rgb(4, 4, 102);
+    color:rgb(4, 4, 102);
+    background-color: rgba(4, 4, 102,0.2);
+    border-radius: 10px;
+    padding: 4px 10px;
+}
+td{
+    text-align: center;
+}
+table{ 
+    // border:0.5px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow:2px 2px 15px 0 rgba(46,61,73,.4);
+    background-color: white;
+}
+.sol{
+    padding:20px;
+    img{
+    box-shadow:2px 2px 15px 0 rgba(46,61,73,.4);
+    border-radius: 10px;
+
+    }
+
+}
+.tp{
+    border:1px solid rgb(48, 102, 4);
+    color:rgb(48, 102, 4);
+    background-color: rgba(48, 102, 4,0.2);
+}
+
+.options{
+    width: 100%;
+    div{
+        width: 100%;
+        padding:10px 0px;
+        button{
+            width:100%;
+            text-align: left;
+            border:0.3px solid rgba(1, 66, 1, 0.2);
+            color: rgb(1, 66, 1);
+            // background-color: rgba(1, 66, 1,0.2) !important;
+            background-color: white !important;
+            &:hover{
+            background-color: white !important;
+            
+            }
+            &.sans{
+                background-color: rgba(124, 8, 0, 0.2) !important;
+            }
+            &.cans{
+                background-color: rgba(1, 66, 1,0.2) !important;
+            }
+        }
+    }
+}
+.qno,.qbtn{
+    div{
+        padding:3px 10px;
+        border-radius: 10px;
+    }
+    .wrong{
+        background-color: red !important;
+        color:white;
+    }
+    .correct{
+        background-color: green !important;
+        color:white;
+    }
+    .unattempt{
+        background-color: rgb(121, 121, 12) !important;
+        color:white;
+    }
+
+}
+
+.question-navigation{
+    .qbtn{
+        button{
+            &.incorrect{
+                background-color: red !important;
+                color:white;
+            }
+            &.correct{
+                background-color: rgb(20, 218, 20) !important;
+                color:white;
+            }
+            &.unattempt{
+                background-color: rgb(121, 121, 12) !important;
+                color:white;
+            }
+        }
+    }
+}

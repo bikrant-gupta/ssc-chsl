@@ -1,0 +1,64 @@
+
+<div class="container">
+  <div class="p1">
+    <div style="width: 100%" fxLayout="row" fxLayoutAlign="space-between">
+      <div class="index">
+        
+      </div>
+      <div class="index">
+        <button mat-button [ngClass]="{'isl': index==0}" (click)="changeIndex(0)">Aptitude</button>
+      </div>
+      <div class="index">
+        <button mat-button [ngClass]="{'isl': index==1}" (click)="changeIndex(1)">Comprehension</button>
+      </div>
+      <div class="index">
+        <button mat-button [ngClass]="{'isl': index==2}" (click)="changeIndex(2)">Logical Reasoning</button>
+      </div>
+      <div class="index">
+        <button mat-button [ngClass]="{'isl': index==3}" (click)="changeIndex(3)">General Awareness</button>
+      </div>
+      <div class="index">
+        
+      </div>
+    </div>
+  </div>
+  <div class="p2" fxLayout="row" fxLayoutAlign="space-between">
+    <div class="p21" fxFlex='70'>
+      <div class="question">
+        <div class="qno">Question {{ currentQuestionNumber + 1 }}.</div>
+        <div class="qd">{{ currentQuestion.question.text }}</div>
+        <div class='img' *ngFor='let image of counter(currentQuestion.question.image)'>
+          <img [src]="'../../../assets/Question/q'+ index+'' +currentExam.questions[index][currentQuestionNumber]+'.jpeg'" alt=""> 
+        </div>
+       </div>
+      <div class="options">
+        <div>
+          <button [ngClass]="{'sans':currentExam.answers[index][currentQuestionNumber]==currentQuestion.option[0].text}" (click)='setAnswer(currentQuestion.option[0].text)' mat-flat-button>{{ currentQuestion.option[0].text }}</button>
+        </div>
+        <div>
+          <button [ngClass]="{'sans':currentExam.answers[index][currentQuestionNumber]==currentQuestion.option[1].text}" (click)='setAnswer(currentQuestion.option[1].text)'  mat-flat-button>{{ currentQuestion.option[1].text }}</button>
+        </div>
+        <div>
+          <button [ngClass]="{'sans':currentExam.answers[index][currentQuestionNumber]==currentQuestion.option[2].text}" (click)='setAnswer(currentQuestion.option[2].text)'  mat-flat-button>{{ currentQuestion.option[2].text }}</button>
+        </div>
+        <div>
+          <button [ngClass]="{'sans':currentExam.answers[index][currentQuestionNumber]==currentQuestion.option[3].text}" (click)='setAnswer(currentQuestion.option[3].text)'  mat-flat-button>{{ currentQuestion.option[3].text }}</button>
+        </div>
+      </div>
+      <div class="allbtn">
+        <button mat-flat-button>Clear Response</button>
+        <button mat-flat-button>Skip</button>
+        <button mat-flat-button (click)='changeQuestion(currentQuestionNumber+1)' >Next</button>
+
+
+      </div>
+    </div>
+    <div class="p22" fxFlex='30'>
+      <div class="question-navigation">
+        <div class='qbtn' >
+          <button (click)="changeQuestion(i)" [ngClass]="{'answered':currentExam.answers[index][i]!='','current':currentQuestionNumber==i}" *ngFor='let question of currentExam.questions[index];let i=index' mat-icon-button>{{i+1}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

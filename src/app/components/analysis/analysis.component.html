@@ -1,0 +1,278 @@
+<div class="container">
+  <div class="p0">
+    <div class="card" fxlayout="row" fxLayoutAlign="center">
+      <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>
+            <h1>Score Card</h1>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>Topic</th>
+          <th>Questions</th>
+          <th>Attempt</th>
+          <th>Correct</th>
+          <th>Incorrect</th>
+          <th>Score</th>
+        </tr>
+        <tr>
+          <th class="tp">Aptitude</th>
+          <td>{{ data[0].total }}</td>
+          <td>{{ data[0].attempt }}</td>
+          <td>{{ data[0].correct }}</td>
+          <td>{{ data[0].attempt - data[0].correct }}</td>
+          <td>
+            {{
+              2 * data[0].correct - 0.5 * (data[0].attempt - data[0].correct)
+            }}
+          </td>
+        </tr>
+        <tr>
+          <th class="tp">Comprehension</th>
+          <td>{{ data[1].total }}</td>
+          <td>{{ data[1].attempt }}</td>
+          <td>{{ data[1].correct }}</td>
+          <td>{{ data[1].attempt - data[1].correct }}</td>
+          <td>
+            {{
+              2 * data[1].correct - 0.5 * (data[1].attempt - data[1].correct)
+            }}
+          </td>
+        </tr>
+        <tr>
+          <th class="tp">Logical Reasoning</th>
+          <td>{{ data[2].total }}</td>
+          <td>{{ data[2].attempt }}</td>
+          <td>{{ data[2].correct }}</td>
+          <td>{{ data[2].attempt - data[2].correct }}</td>
+          <td>
+            {{
+              2 * data[2].correct - 0.5 * (data[2].attempt - data[2].correct)
+            }}
+          </td>
+        </tr>
+        <tr>
+          <th class="tp">General Awareness</th>
+          <td>{{ data[3].total }}</td>
+          <td>{{ data[3].attempt }}</td>
+          <td>{{ data[3].correct }}</td>
+          <td>{{ data[3].attempt - data[3].correct }}</td>
+          <td>
+            {{
+              2 * data[3].correct - 0.5 * (data[3].attempt - data[3].correct)
+            }}
+          </td>
+        </tr>
+        <tr>
+          <th>Total</th>
+          <td>
+            {{ data[0].total + data[1].total + data[2].total + data[3].total }}
+          </td>
+          <td>
+            {{
+              data[0].attempt +
+                data[1].attempt +
+                data[2].attempt +
+                data[3].attempt
+            }}
+          </td>
+          <td>
+            {{
+              data[0].correct +
+                data[1].correct +
+                data[2].correct +
+                data[3].correct
+            }}
+          </td>
+          <td>
+            {{
+              data[0].attempt -
+                data[0].correct +
+                data[1].attempt -
+                data[1].correct +
+                data[2].attempt -
+                data[2].correct +
+                data[3].attempt -
+                data[3].correct
+            }}
+          </td>
+          <td>
+            {{
+              2 * data[0].correct -
+                0.5 * (data[0].attempt - data[0].correct) +
+                2 * data[1].correct -
+                0.5 * (data[1].attempt - data[1].correct) +
+                2 * data[2].correct -
+                0.5 * (data[2].attempt - data[2].correct) +
+                2 * data[3].correct -
+                0.5 * (data[3].attempt - data[3].correct)
+            }}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="p1">
+    <div style="width: 100%" fxLayout="row" fxLayoutAlign="space-between">
+      <div class="index">
+        <!-- <button mat-button disabled="true">Total Score:10</button> -->
+      </div>
+      <div class="index">
+        <button
+          mat-button
+          [ngClass]="{ isl: index == 0 }"
+          (click)="changeIndex(0)"
+        >
+          Aptitude
+        </button>
+      </div>
+      <div class="index">
+        <button
+          mat-button
+          [ngClass]="{ isl: index == 1 }"
+          (click)="changeIndex(1)"
+        >
+          Comprehension
+        </button>
+      </div>
+      <div class="index">
+        <button
+          mat-button
+          [ngClass]="{ isl: index == 2 }"
+          (click)="changeIndex(2)"
+        >
+          Logical Reasoning
+        </button>
+      </div>
+      <div class="index">
+        <button
+          mat-button
+          [ngClass]="{ isl: index == 3 }"
+          (click)="changeIndex(3)"
+        >
+          General Awareness
+        </button>
+      </div>
+      <div class="index"></div>
+    </div>
+  </div>
+  <div class="p2" fxLayout="row" fxLayoutAlign="space-between">
+    <div class="p21" fxFlex='70'>
+      <div class="question" >
+        <div class="qno" fxLayout='row' fxLayoutAlign='start center'>
+            <div>Question {{ currentQuestionNumber + 1 }}.</div>
+            <div class='wrong' *ngIf='currentExam.answers[index][currentQuestionNumber] && currentExam.answers[index][currentQuestionNumber]!=currentQuestion.correct'> Incorrect </div>
+            <div class='correct' *ngIf='currentExam.answers[index][currentQuestionNumber]==currentQuestion.correct'> Correct </div>
+            <div class='unattempt' *ngIf='!currentExam.answers[index][currentQuestionNumber]'> Unattempt </div>
+             
+        </div>
+        <div class="qd">{{ currentQuestion.question.text }}</div>
+        <div class='img' *ngFor='let image of counter(currentQuestion.question.image)'>
+          <img [src]="'../../../assets/Question/q'+ index+'' +currentExam.questions[index][currentQuestionNumber]+'.jpeg'" alt=""> 
+        </div>
+      </div>
+      <div class="options">
+        <div>
+          <button
+            [ngClass]="{
+              sans:
+                currentExam.answers[index][currentQuestionNumber] ==
+                currentQuestion.option[0].text,
+              cans: currentQuestion.correct == currentQuestion.option[0].text
+            }"
+            disabled="true"
+            mat-flat-button
+          >
+            {{ currentQuestion.option[0].text }}
+          </button>
+        </div>
+        <div>
+          <button
+            [ngClass]="{
+              sans:
+                currentExam.answers[index][currentQuestionNumber] ==
+                currentQuestion.option[1].text,
+              cans:
+              currentQuestion.correct ==
+                currentQuestion.option[1].text
+            }"
+            disabled="true"
+            mat-flat-button
+          >
+            {{ currentQuestion.option[1].text }}
+          </button>
+        </div>
+        <div>
+          <button
+            [ngClass]="{
+              sans:
+                currentExam.answers[index][currentQuestionNumber] ==
+                currentQuestion.option[2].text,
+              cans:
+              currentQuestion.correct ==
+                currentQuestion.option[2].text
+            }"
+            disabled="true"
+            mat-flat-button
+          >
+            {{ currentQuestion.option[2].text }}
+          </button>
+        </div>
+        <div>
+          <button
+            [ngClass]="{
+              sans:
+                currentExam.answers[index][currentQuestionNumber] ==
+                currentQuestion.option[3].text,
+              cans:
+              currentQuestion.correct ==
+                currentQuestion.option[3].text
+            }"
+            disabled="true"
+            mat-flat-button
+          >
+            {{ currentQuestion.option[3].text }}
+          </button>
+        </div>
+      </div>
+      <div class="allbtn">
+        <button mat-flat-button>Clear Response</button>
+        <button mat-flat-button>Skip</button>
+        <button
+          mat-flat-button
+          (click)="changeQuestion(currentQuestionNumber + 1)"
+        >
+          Next
+        </button>
+      </div>
+      <div class="sol">
+        <img [src]="'../../../assets/Solution/a'+ index+'' +currentExam.questions[index][currentQuestionNumber]+'.jpeg'" alt=""> 
+      </div>
+    </div>
+    <div class="p22" fxFlex='30'>
+      <div class="question-navigation">
+        <div class="qbtn">
+          <button
+            (click)="changeQuestion(i)"
+            [ngClass]="{
+              current: currentQuestionNumber == i,
+              correct: currentExam.correct[index][i]==currentExam.answers[index][i],
+              incorrect: currentExam.answers[index][i] && currentExam.correct[index][i]!=currentExam.answers[index][i],
+              unattempt: ''==currentExam.answers[index][i]
+            }"
+            *ngFor="let question of currentExam.questions[index]; let i = index"
+            mat-icon-button
+          >
+            {{ i + 1 }}
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
