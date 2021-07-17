@@ -1,0 +1,90 @@
+.container{
+    padding:20px;
+}
+.question-navigation{
+    border:0.5px solid #aaa;
+    padding:20px;
+    // background-color: #ddd;
+    background-color: white;
+
+    border-radius: 10px;
+    .qbtn{
+        button{
+            margin-left:10px;
+            margin-bottom:10px;
+            border:0.5px solid rgb(1, 1, 44);
+            color: rgb(1, 1, 44);
+            background-color: rgba(1, 1, 44,0.3) !important;
+            &.answered{
+                background-color:yellow !important;
+            }
+            &.current{
+                border:2px solid red !important;
+            }
+        }
+    }
+}
+.index button{
+    border:0.5px solid rgb(219, 35, 35);
+    color: red;
+    background-color: #f003 !important;
+    padding:5px 20px !important;
+    border-radius: 10px;
+    line-height:20px !important;
+    &.isl{
+        border:0.5px solid rgb(219, 35, 35);
+        color: white !important;
+        background-color: red !important;
+    }
+}
+.question{
+    border:0.5px solid rgb(219, 35, 35);
+    border-radius: 10px;
+    padding:10px;
+    background-color: white;
+
+    // width:100%;
+    // min-height: 200px;
+}
+.qno{
+    color: #0008;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.qd{
+    font-size: 20px;
+}
+.options{
+    width: 100%;
+    div{
+        width: 100%;
+        padding:10px 0px;
+        button{
+            width:100%;
+            text-align: left;
+            border:0.3px solid rgba(1, 66, 1, 0.2);
+            color: rgb(1, 66, 1);
+            // background-color: rgba(1, 66, 1,0.2) !important;
+            background-color: white !important;
+            &:hover{
+            background-color: rgba(1, 66, 1,0.2) !important;
+            
+            }
+            &.sans{
+                background-color: rgba(1, 66, 1,0.2) !important;
+            }
+        }
+    }
+}
+.p21,.p22{
+    padding: 10px;
+}
+.allbtn{
+    margin-top:30px;
+    button{
+        border:0.5px solid rgb(1, 1, 44);
+        color: rgb(1, 1, 44);
+        background-color: rgba(1, 1, 44,0.3) !important;
+        margin-right: 30px;
+    }
+}

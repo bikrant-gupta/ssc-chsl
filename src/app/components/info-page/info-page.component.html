@@ -1,0 +1,38 @@
+<div class="container" fxLayout='row' fxLayoutAlign=''>
+    <div fxFlex='70'>
+        <div><h1>Instructions</h1></div>
+
+        <div>You can answer maximum <span class='b'>100 Questions</span> in this exam</div>
+        <div>Total <span class='b'>60 Minutes</span> will be given to you.</div>
+        <div>Total <span class='b'>4 sections</span> are there. You will be able to see 4 Buttons at top and can navigate in any Section.</div>
+        <div>For each question <span class='b'>+2 for correct and -0.5 for incorrect answer</span></div>
+        <div>You will able to jump to any question number from <span class='b'>question navigation box(You will be able to see at right of question panel)</span></div>
+        <div><span class='blue'>Blue</span> color box indicates, You haven't visited that question.</div>
+        <div><span class='yellow'>Yellow</span> color box indicates, You haven't visited but not answered that question.</div>
+        <div><span class='green'>Green</span> color box indicates, You have answered that question.</div>
+    
+        <div>
+            <button mat-raised-button *ngIf='!current.length' (click)='startExam()'>Start Mock Exam</button>
+        </div>
+    
+    </div>
+   
+    <div class='allexams' fxFlex='30'>
+        <div class='currexam'>
+            <div><h2>Ongoing Exam</h2></div>
+            <div *ngFor='let exam of current'>
+                <div class='card' [routerLink]="'/exam/'+exam.examid" > {{exam.examid | uppercase}} started on {{exam.startTime | date:'medium'}} Continue Exam</div>
+            </div>
+
+        </div>
+        <div class="oldexam">
+            <div><h2>Past Exams</h2></div>
+            <div *ngFor='let exam of old'>
+                <div class='card' [routerLink]="'/analysis/'+exam.examid" > {{exam.examid | uppercase}} attended on {{exam.startTime | date}} Analysis</div>
+                   
+            </div>
+        </div>
+
+    </div>
+
+</div>

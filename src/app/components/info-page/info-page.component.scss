@@ -1,0 +1,51 @@
+.blue{
+    color:blue;
+}
+.b{
+    font-weight: bold;
+}
+.yellow{
+    color:rgb(124, 124, 0);
+}
+.green{
+    color:green;
+}
+.container{
+    padding:15px;
+    div{
+        padding:10px;
+    }
+}
+.allexams{
+    width: 100%;
+}
+.oldexam{
+    border:0.5px solid blue;
+    color: black;
+    background-color: #00f2;
+    // padding: 10px;
+    border-radius: 10px;
+    // width:100%;
+    min-height: 200px;
+    margin-top:10px;
+}
+.currexam{
+    border:0.5px solid green;
+    color: black;
+    background-color: #0f02;
+    // padding: 10px;
+    border-radius: 10px;
+    // width:100%;
+    min-height: 200px;
+}
+.card{
+    border: 0.5px solid black;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.cbtn{
+    margin-top: 20px;
+    
+}

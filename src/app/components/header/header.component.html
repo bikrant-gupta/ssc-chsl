@@ -1,0 +1,23 @@
+<header>
+    <div fxLayout='row' fxLayoutAlign='space-between center'>
+        <div class="brand">
+            SSC
+        </div>
+        <div>
+            SSC CHSL Mock Test 1
+        </div>
+        <div *ngIf='time!=""'>
+            <div class='tl'>Time Left</div>
+            <div class='time'>{{time}}</div>
+            
+            
+        </div>
+        <div>
+            <button *ngIf='showEndButton' (click)='stopExam()' mat-raised-button>End Test</button>
+        </div>
+
+    </div>
+
+    
+
+</header>
