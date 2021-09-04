@@ -76,12 +76,13 @@ export class QuestionBankService {
       if(question.qid==qid)return question
     }
   }
+  //no-touch
   aptiQuesion(){
     var questions=[
       {
         qid:1,
         question:{
-          text:"A and B borrowed ` 3000 and ` 3200 respectively at the same rate of interest for 2.5 years. If B paid ` 40 more interest than A, find the rate of interest:",
+          text:"A and B borrowed Rs.3000 and Rs.3200 respectively at the same rate of interest for 2.5 years. If B paid Rs.40 more interest than A, find the rate of interest:",
           image:0
         },
         option:[
@@ -888,89 +889,831 @@ export class QuestionBankService {
     ]
     return questions
   }
+  //English Language 1-25
   compQuesion(){
     var questions=[
       {
         qid:1,
         question:{
-          text:"How are you",
+          text:"Select the word which means the same as the group of words given. A place where wild animals live",
           image:0
         },
         option:[
           {
-            text:'Good',
+            text:'Cage',
             image:0
           },
           {
-            text:'Well',
+            text:'Kennel',
             image:0
           },
           {
-            text:'Exec',
+            text:'Hutch',
             image:0
           },
           {
-            text:'Ppp',
+            text:'Lair',
             image:0
           },
         ],
-        correct:'Good'
+        correct:'Lair'
       },
       {
         qid:2,
         question:{
-          text:"How are you",
+          text:"Select the word which means the same as the group of words given. A solution or remedy for all difficulties or diseases",
           image:0
         },
         option:[
           {
-            text:'Good',
+            text:'Medicine',
             image:0
           },
           {
-            text:'Well',
+            text:'Treatment',
             image:0
           },
           {
-            text:'Exec',
+            text:'Therapy',
             image:0
           },
           {
-            text:'Ppp',
+            text:'Panacea',
             image:0
           },
         ],
-        correct:'Exec'
+        correct:'Panacea'
       },
       {
         qid:3,
         question:{
-          text:"How are you",
+          text:"Select the alternative that will improve the underlined part of the sentence. In case there is no improvement select ‘No improvement’. There was no sign of recognition on his face when they met after ten years.",
           image:0
         },
         option:[
           {
-            text:'Good',
+            text:'no sign to recognise',
             image:0
           },
           {
-            text:'Well',
+            text:'no any sign of recognition',
             image:0
           },
           {
-            text:'Exec',
+            text:'No improvement',
             image:0
           },
           {
-            text:'Ppp',
+            text:'no sign for recognition',
             image:0
           },
         ],
-        correct:'Well'
-      }
+        correct:'No improvement'
+      },
+      {
+        qid:4,
+        question:{
+          text:"Select the segment in the sentence, which contains the grammatical error. We were busy at the work and went for lunch only at 2.30 pm.",
+          image:0
+        },
+        option:[
+          {
+            text:'only at 2.30 pm',
+            image:0
+          },
+          {
+            text:'at the work',
+            image:0
+          },
+          {
+            text:'and went for lunch',
+            image:0
+          },
+          {
+            text:'We were busy',
+            image:0
+          },
+        ],
+        correct:'at the work'
+      },
+      {
+        qid:5,
+        question:{
+          text:`
+          Instructions
+In the following passage some words have been deleted. Fill in the blanks with the help of the alternatives given. Select the most
+appropriate option for each blank.
+Valley of Flowers National Park, an Indian national park located in North Chamoli in the state of Uttarakhand, is known for its meadows
+of endemic alpine flowers and variety of flora. (1)______ richly diverse area is also home (2)______ rare and endangered animals,
+including the Asiatic black bear, snow leopard, musk deer, brown bear, red fox, and blue sheep. Birds (3)______ in the park include the
+Himalayan monal pheasant and other (4)______ altitude birds. At 3352 to 3658 meters above sea level, the gentle (5)______ of the Valley
+of Flowers National Park complements the rugged mountain wilderness of Nanda Devi National Park to the east.
+
+Select the most appropriate option to fill in blank No.1.`,
+          image:0
+        },
+        option:[
+          {
+            text:'That',
+            image:0
+          },
+          {
+            text:'These',
+            image:0
+          },
+          {
+            text:'This',
+            image:0
+          },
+          {
+            text:'Which',
+            image:0
+          },
+        ],
+        correct:'This'
+      },
+      {
+        qid:6,
+        question:{
+          text:`
+          Instructions
+In the following passage some words have been deleted. Fill in the blanks with the help of the alternatives given. Select the most
+appropriate option for each blank.
+Valley of Flowers National Park, an Indian national park located in North Chamoli in the state of Uttarakhand, is known for its meadows
+of endemic alpine flowers and variety of flora. (1)______ richly diverse area is also home (2)______ rare and endangered animals,
+including the Asiatic black bear, snow leopard, musk deer, brown bear, red fox, and blue sheep. Birds (3)______ in the park include the
+Himalayan monal pheasant and other (4)______ altitude birds. At 3352 to 3658 meters above sea level, the gentle (5)______ of the Valley
+of Flowers National Park complements the rugged mountain wilderness of Nanda Devi National Park to the east.
+
+Select the most appropriate option to fill in blank No.2.`,
+          image:0
+        },
+        option:[
+          {
+            text:'of',
+            image:0
+          },
+          {
+            text:'to',
+            image:0
+          },
+          {
+            text:'with',
+            image:0
+          },
+          {
+            text:'in',
+            image:0
+          },
+        ],
+        correct:'to'
+      },
+      {
+        qid:7,
+        question:{
+          text:`
+          Instructions
+          In the following passage some words have been deleted. Fill in the blanks with the help of the alternatives given. Select the most
+          appropriate option for each blank.
+          Valley of Flowers National Park, an Indian national park located in North Chamoli in the state of Uttarakhand, is known for its meadows
+          of endemic alpine flowers and variety of flora. (1)______ richly diverse area is also home (2)______ rare and endangered animals,
+          including the Asiatic black bear, snow leopard, musk deer, brown bear, red fox, and blue sheep. Birds (3)______ in the park include the
+          Himalayan monal pheasant and other (4)______ altitude birds. At 3352 to 3658 meters above sea level, the gentle (5)______ of the Valley
+          of Flowers National Park complements the rugged mountain wilderness of Nanda Devi National Park to the east.
+          
+          Select the most appropriate option to fill in blank No.2.`,
+          image:0
+        },
+        option:[
+          {
+            text:'finding',
+            image:0
+          },
+          {
+            text:'are found',
+            image:0
+          },
+          {
+            text:'found',
+            image:0
+          },
+          {
+            text:'find',
+            image:0
+          },
+        ],
+        correct:'found'
+      },
+      {
+        qid:8,
+        question:{
+          text:`
+          Instructions
+          In the following passage some words have been deleted. Fill in the blanks with the help of the alternatives given. Select the most
+          appropriate option for each blank.
+          Valley of Flowers National Park, an Indian national park located in North Chamoli in the state of Uttarakhand, is known for its meadows
+          of endemic alpine flowers and variety of flora. (1)______ richly diverse area is also home (2)______ rare and endangered animals,
+          including the Asiatic black bear, snow leopard, musk deer, brown bear, red fox, and blue sheep. Birds (3)______ in the park include the
+          Himalayan monal pheasant and other (4)______ altitude birds. At 3352 to 3658 meters above sea level, the gentle (5)______ of the Valley
+          of Flowers National Park complements the rugged mountain wilderness of Nanda Devi National Park to the east.
+          
+          Select the most appropriate option to fill in blank No.3.`,
+          image:0
+        },
+        option:[
+          {
+            text:'high',
+            image:0
+          },
+          {
+            text:'flight',
+            image:0
+          },
+          {
+            text:'far',
+            image:0
+          },
+          {
+            text:'soaring',
+            image:0
+          },
+        ],
+        correct:'high'
+      },
+      {
+        qid:9,
+        question:{
+          text:`
+          Instructions
+          In the following passage some words have been deleted. Fill in the blanks with the help of the alternatives given. Select the most
+          appropriate option for each blank.
+          Valley of Flowers National Park, an Indian national park located in North Chamoli in the state of Uttarakhand, is known for its meadows
+          of endemic alpine flowers and variety of flora. (1)______ richly diverse area is also home (2)______ rare and endangered animals,
+          including the Asiatic black bear, snow leopard, musk deer, brown bear, red fox, and blue sheep. Birds (3)______ in the park include the
+          Himalayan monal pheasant and other (4)______ altitude birds. At 3352 to 3658 meters above sea level, the gentle (5)______ of the Valley
+          of Flowers National Park complements the rugged mountain wilderness of Nanda Devi National Park to the east.
+          
+          Select the most appropriate option to fill in blank No.4.`,
+          image:0
+        },
+        option:[
+          {
+            text:'shore',
+            image:0
+          },
+          {
+            text:'scene',
+            image:0
+          },
+          {
+            text:'movement',
+            image:0
+          },
+          {
+            text:'landscape',
+            image:0
+          },
+        ],
+        correct:'landscape'
+      },
+      {
+        qid:10,
+        question:{
+          text:"Select the most appropriate meaning of the idiom. Back in saddle",
+          image:0
+        },
+        option:[
+          {
+            text:'Resume duty',
+            image:0
+          },
+          {
+            text:'Put a new saddle',
+            image:0
+          },
+          {
+            text:'Teach someone riding',
+            image:0
+          },
+          {
+            text:'Learn how to ride',
+            image:0
+          },
+        ],
+        correct:'Resume duty'
+      },
+      {
+        qid:11,
+        question:{
+          text:`Given below are four jumbled sentences. Select the option that gives their correct order.
+          A. Just before the sacrifice, however, he noticed that one of the king’s fingers was missing.
+          B. Once when travelling across a forest, the king was captured by a powerful tribe.
+          C. Since it was not acceptable to sacrifice an incomplete person to God, the king was released.
+          D. The tribal priest decided to sacrifice the king to their God.`,
+          image:0
+        },
+        option:[
+          {
+            text:'BDAC',
+            image:0
+          },
+          {
+            text:'CDBA',
+            image:0
+          },
+          {
+            text:'ADBC',
+            image:0
+          },
+          {
+            text:'DACB',
+            image:0
+          },
+        ],
+        correct:'BDAC'
+      },
+      {
+        qid:12,
+        question:{
+          text:`Select the most appropriate option to fill in the blank.
+          By accelerating digitisation and leveraging next generation technologies, the life insurance sector can double its ______ to Rupees 70
+          lakh crores, a study said.`,
+          image:0
+        },
+        option:[
+          {
+            text:'funding',
+            image:0
+          },
+          {
+            text:'reports',
+            image:0
+          },
+          {
+            text:'policies',
+            image:0
+          },
+          {
+            text:'assets',
+            image:0
+          },
+        ],
+        correct:'assets'
+      },
+      {
+        qid:13,
+        question:{
+          text:"Select the most appropriate ANTONYM of the given word. PRIM",
+          image:0
+        },
+        option:[
+          {
+            text:'Principle',
+            image:0
+          },
+          {
+            text:'Intellectual',
+            image:0
+          },
+          {
+            text:'Dishevelled',
+            image:0
+          },
+          {
+            text:'Mature',
+            image:0
+          },
+        ],
+        correct:'Dishevelled'
+      },
+      {
+        qid:14,
+        question:{
+          text:"Select the most appropriate ANTONYM of the given word. EXHALE",
+          image:0
+        },
+        option:[
+          {
+            text:'Expel',
+            image:0
+          },
+          {
+            text:'Inspire',
+            image:0
+          },
+          {
+            text:'Inhale',
+            image:0
+          },
+          {
+            text:'Respite',
+            image:0
+          },
+        ],
+        correct:'Inhale'
+      },
+      {
+        qid:15,
+        question:{
+          text:`Given below are four jumbled sentences. Select the option that gives their correct order.
+          A. Problems in absorption of vitamins is the main cause of vitamin deficiency.
+          B. This is the reason why people with metabolic disorders such as obesity, often suffer from vitamin deficiency
+          C. Hence, digestion and the absorption mechanism in the body is very important.
+          D. Vitamin deficiency is not just caused by lack of vitamins in the diet.`,
+          image:0
+        },
+        option:[
+          {
+            text:'BCAD',
+            image:0
+          },
+          {
+            text:'CBDA',
+            image:0
+          },
+          {
+            text:'DABC',
+            image:0
+          },
+          {
+            text:'ACBD',
+            image:0
+          },
+        ],
+        correct:'DABC'
+      },
+      {
+        qid:16,
+        question:{
+          text:"Select the word with the incorrect spelling",
+          image:0
+        },
+        option:[
+          {
+            text:'Denounce',
+            image:0
+          },
+          {
+            text:'Ascertain',
+            image:0
+          },
+          {
+            text:'Systemetic',
+            image:0
+          },
+          {
+            text:'Combination',
+            image:0
+          },
+        ],
+        correct:'Systemetic'
+      },
+      {
+        qid:17,
+        question:{
+          text:`Select the most appropriate synonym of the given word.
+          RESILIENT`,
+          image:0
+        },
+        option:[
+          {
+            text:'Supple',
+            image:0
+          },
+          {
+            text:'Furious',
+            image:0
+          },
+          {
+            text:'Lazy',
+            image:0
+          },
+          {
+            text:'Baseless',
+            image:0
+          },
+        ],
+        correct:'Supple'
+      },
+      {
+        qid:18,
+        question:{
+          text:"Select the alternative that will improve the underlined part of the sentence. In case there is no improvement select ‘No improvement’.Carrots and sweet potatoes were airdrop for animals starving during the tragic bushfires in Australia.",
+          image:0
+        },
+        option:[
+          {
+            text:' are airdropped for animals starved',
+            image:0
+          },
+          {
+            text:'were airdropped for animals starving',
+            image:0
+          },
+          {
+            text:'No improvement',
+            image:0
+          },
+          {
+            text:'will be airdropping for animals starving',
+            image:0
+          },
+        ],
+        correct:'were airdropped for animals starving'
+      },
+      {
+        qid:19,
+        question:{
+          text:"Select the most appropriate meaning of the underlined idiom in the given sentence. When they read about the proposed strike of buses they said, “We’ll cross that bridge when we come to it.”",
+          image:0
+        },
+        option:[
+          {
+            text:'Call them for talks ',
+            image:0
+          },
+          {
+            text:'Cancel our plans',
+            image:0
+          },
+          {
+            text:'Prevent them',
+            image:0
+          },
+          {
+            text:'Solve the problem',
+            image:0
+          },
+        ],
+        correct:'Solve the problem'
+      },
+      {
+        qid:20,
+        question:{
+          text:"Select the segment in the sentence, which contains the grammatical error. No matter what that the mother did the baby didn’t stop crying.",
+          image:0
+        },
+        option:[
+          {
+            text:'the mother did',
+            image:0
+          },
+          {
+            text:' what that',
+            image:0
+          },
+          {
+            text:'No matter',
+            image:0
+          },
+          {
+            text:'the baby didn’t stop crying',
+            image:0
+          },
+        ],
+        correct:'what that'
+      },
+      {
+        qid:21,
+        question:{
+          text:"Select the option that is the direct form of the sentence. Experts said that several steps were being taken to promote foreign trade as it constituted 45% of the country’s economy.",
+          image:0
+        },
+        option:[
+          {
+            text:'Experts are saying, “Several steps were taken to promote foreign trade as it constituted 45% of the country’s economy”.',
+            image:0
+          },
+          {
+            text:'Experts said, “Several steps should be taken to promote foreign trade as they constitute 45% of the country’s economy”.',
+            image:0
+          },
+          {
+            text:'Experts said, “Several steps are being taken to promote foreign trade as it constitutes 45% of the country’s economy”.',
+            image:0
+          },
+          {
+            text:'Experts said, “Several steps had been taken for promoting foreign trade as it constitute 45% of the country’s economy”.',
+            image:0
+          },
+        ],
+        correct:'Experts said, “Several steps are being taken to promote foreign trade as it constitutes 45% of the country’s economy”.'
+      },
+      {
+        qid:22,
+        question:{
+          text:"Select the most appropriate synonym of the given word. OCCUR",
+          image:0
+        },
+        option:[
+          {
+            text:'Hasten',
+            image:0
+          },
+          {
+            text:'Happen',
+            image:0
+          },
+          {
+            text:'Hinder',
+            image:0
+          },
+          {
+            text:'Hamper',
+            image:0
+          },
+        ],
+        correct:'Happen'
+      },
+      {
+        qid:23,
+        question:{
+          text:"Select the option that is the passive form of the sentence. Jiya wrote the research paper with the help of her tutor.",
+          image:0
+        },
+        option:[
+          {
+            text:'The research paper was wrote by Jiya with the help of the tutor.',
+            image:0
+          },
+          {
+            text:'The research paper is being written by Jiya with the help of her tutor.',
+            image:0
+          },
+          {
+            text:'The research paper can be written by the tutor with the help of Jiya.',
+            image:0
+          },
+          {
+            text:'The research paper was written by Jiya with the help of her tutor.',
+            image:0
+          },
+        ],
+        correct:'The research paper was written by Jiya with the help of her tutor.'
+      },
+      {
+        qid:24,
+        question:{
+          text:`Select the most appropriate option to fill in the blank.
+          Madhuri is bringing ______ her sister’s daughter after the death of the child’s parents.`,
+          image:0
+        },
+        option:[
+          {
+            text:'in',
+            image:0
+          },
+          {
+            text:'out',
+            image:0
+          },
+          {
+            text:'up',
+            image:0
+          },
+          {
+            text:'over',
+            image:0
+          },
+        ],
+        correct:'up'
+      },
+      {
+        qid:25,
+        question:{
+          text:"Select the word with the correct spelling.",
+          image:0
+        },
+        option:[
+          {
+            text:'Avalaunche',
+            image:0
+          },
+          {
+            text:'Capricious',
+            image:0
+          },
+          {
+            text:'Ecstacy',
+            image:0
+          },
+          {
+            text:'Complasent',
+            image:0
+          },
+        ],
+        correct:'Capricious'
+      },
+      {
+        qid:1,
+        question:{
+          text:"aaaaaaaa",
+          image:0
+        },
+        option:[
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+        ],
+        correct:'aaaaaaaa'
+      },
+      {
+        qid:1,
+        question:{
+          text:"aaaaaaaa",
+          image:0
+        },
+        option:[
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+        ],
+        correct:'aaaaaaaa'
+      },
+      {
+        qid:1,
+        question:{
+          text:"aaaaaaaa",
+          image:0
+        },
+        option:[
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+        ],
+        correct:'aaaaaaaa'
+      },
+      {
+        qid:1,
+        question:{
+          text:"aaaaaaaa",
+          image:0
+        },
+        option:[
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+          {
+            text:'aaaaaaaa',
+            image:0
+          },
+        ],
+        correct:'aaaaaaaa'
+      },
+      
     ]
     return questions
   }
+
+
   reasonQuesion(){
     var questions=[
       {
@@ -1054,86 +1797,661 @@ export class QuestionBankService {
     ]
     return questions
   }
-  generalQuesion(){
+
+  // General Awareness 76-100
+  generalQuesion(){ 
     var questions=[
       {
-        qid:1,
+        qid:76,
         question:{
-          text:"How are you",
+          text:"In which of the following states is the Nizam Sagar Dam situated?",
           image:0
         },
         option:[
           {
-            text:'Good',
+            text:'Karnataka',
             image:0
           },
           {
-            text:'Well',
+            text:'Telangana',
             image:0
           },
           {
-            text:'Exec',
+            text:'West Bengal',
             image:0
           },
           {
-            text:'Ppp',
+            text:'Andhra Pradesh',
             image:0
           },
         ],
-        correct:'Good'
+        correct:'Telangana'
       },
       {
-        qid:2,
+        qid:77,
         question:{
-          text:"How are you",
+          text:"Atal Bhujal Yojana (ABY) is related to _____________.",
           image:0
         },
         option:[
           {
-            text:'Good',
+            text:'employment',
             image:0
           },
           {
-            text:'Well',
+            text:'climate change',
             image:0
           },
           {
-            text:'Exec',
+            text:'ground water',
             image:0
           },
           {
-            text:'Ppp',
+            text:' organic farming',
             image:0
           },
         ],
-        correct:'Exec'
+        correct:'ground water'
       },
       {
-        qid:3,
+        qid:78,
         question:{
-          text:"How are you",
+          text:"In which state is the Bankapura Peacock Sanctuary situated?",
           image:0
         },
         option:[
           {
-            text:'Good',
+            text:'Rajasthan',
             image:0
           },
           {
-            text:'Well',
+            text:'Maharashtra',
             image:0
           },
           {
-            text:'Exec',
+            text:'Madhya Pradesh',
             image:0
           },
           {
-            text:'Ppp',
+            text:'Karnataka',
             image:0
           },
         ],
-        correct:'Well'
-      }
+        correct:'Karnataka'
+      },
+      {
+        qid:79,
+        question:{
+          text:"The first Commonwealth Games were held in:",
+          image:0
+        },
+        option:[
+          {
+            text:'1925',
+            image:0
+          },
+          {
+            text:'1935',
+            image:0
+          },
+          {
+            text:'1930',
+            image:0
+          },
+          {
+            text:'1920',
+            image:0
+          },
+        ],
+        correct:'1930'
+      },
+      {
+        qid:80,
+        question:{
+          text:"The first Regional Rural Bank was established in India in the year:",
+          image:0
+        },
+        option:[
+          {
+            text:'1991',
+            image:0
+          },
+          {
+            text:'1975',
+            image:0
+          },
+          {
+            text:'1982',
+            image:0
+          },
+          {
+            text:'1980',
+            image:0
+          },
+        ],
+        correct:'1975'
+      },
+      {
+        qid:81,
+        question:{
+          text:"Which instrument was used to detect gravitational waves for the very first time ?",
+          image:0
+        },
+        option:[
+          {
+            text:'GIGO',
+            image:0
+          },
+          {
+            text:'TRIGO',
+            image:0
+          },
+          {
+            text:'WIGO',
+            image:0
+          },
+          {
+            text:'LIGO',
+            image:0
+          },
+        ],
+        correct:'LIGO'
+      },
+      {
+        qid:82,
+        question:{
+          text:"When was the Muslim League founded?",
+          image:0
+        },
+        option:[
+          {
+            text:'1906',
+            image:0
+          },
+          {
+            text:'1901',
+            image:0
+          },
+          {
+            text:'1905',
+            image:0
+          },
+          {
+            text:'1903',
+            image:0
+          },
+        ],
+        correct:'1906'
+      },
+      {
+        qid:83,
+        question:{
+          text:"What is the approximate length of the navigable inland waterways of India?",
+          image:0
+        },
+        option:[
+          {
+            text:'15,600 km',
+            image:0
+          },
+          {
+            text:'16,400 km',
+            image:0
+          },
+          {
+            text:'14,500 km',
+            image:0
+          },
+          {
+            text:' 12,800 km',
+            image:0
+          },
+        ],
+        correct:'14,500 km'
+      },
+      {
+        qid:84,
+        question:{
+          text:"Python is a _______.",
+          image:0
+        },
+        option:[
+          {
+            text:'low level language',
+            image:0
+          },
+          {
+            text:'high level language',
+            image:0
+          },
+          {
+            text:'machine language',
+            image:0
+          },
+          {
+            text:'assembly language',
+            image:0
+          },
+        ],
+        correct:'high level language'
+      },
+      {
+        qid:85,
+        question:{
+          text:"How many windows are there on the outside walls of Hawa Mahal of Jaipur?",
+          image:0
+        },
+        option:[
+          {
+            text:'953',
+            image:0
+          },
+          {
+            text:'964',
+            image:0
+          },
+          {
+            text:'965',
+            image:0
+          },
+          {
+            text:'973',
+            image:0
+          },
+        ],
+        correct:'953'
+      },
+      {
+        qid:86,
+        question:{
+          text:"When did Ibrahim Lodhi become the Sultan of Delhi?",
+          image:0
+        },
+        option:[
+          {
+            text:'1526',
+            image:0
+          },
+          {
+            text:'1517',
+            image:0
+          },
+          {
+            text:'1527',
+            image:0
+          },
+          {
+            text:'1516',
+            image:0
+          },
+        ],
+        correct:'1517'
+      },
+      {
+        qid:87,
+        question:{
+          text:`When was a landmark Motor Vehicles Agreement (MVA) for the Regulation of Passenger, Personnel and Cargo Vehicular Traffic
+          signed between sub-grouping of four SAARC nations, Bangladesh, Bhutan, India and Nepal (BBIN)?`,
+          image:0
+        },
+        option:[
+          {
+            text:'2012',
+            image:0
+          },
+          {
+            text:'2015',
+            image:0
+          },
+          {
+            text:'2013',
+            image:0
+          },
+          {
+            text:'2010',
+            image:0
+          },
+        ],
+        correct:'2015'
+      },
+      {
+        qid:88,
+        question:{
+          text:"With which game was Khashaba Dadasaheb Jadhav associated?",
+          image:0
+        },
+        option:[
+          {
+            text:'Weight lifting',
+            image:0
+          },
+          {
+            text:' Gymnastic',
+            image:0
+          },
+          {
+            text:'Shooting',
+            image:0
+          },
+          {
+            text:'Wrestling',
+            image:0
+          },
+        ],
+        correct:'Wrestling'
+      },
+      {
+        qid:89,
+        question:{
+          text:"After which former Indian Prime Minister was Rohtang pass tunnel named, in December 2019?",
+          image:0
+        },
+        option:[
+          {
+            text:'Atal Bihari Vajpayee',
+            image:0
+          },
+          {
+            text:' Rajiv Gandhi',
+            image:0
+          },
+          {
+            text:'Lal Bahadur Shastri',
+            image:0
+          },
+          {
+            text:'Jawahar Lal Nehru',
+            image:0
+          },
+        ],
+        correct:'Atal Bihari Vajpayee'
+      },
+      {
+        qid:90,
+        question:{
+          text:"Who won the Nobel prize 2019 in literature?",
+          image:0
+        },
+        option:[
+          {
+            text:' Peter Handke',
+            image:0
+          },
+          {
+            text:'biswajit kumar shaw',
+            image:0
+          },
+          {
+            text:'Kazuo Ishiguro',
+            image:0
+          },
+          {
+            text:'Bob Dylan',
+            image:0
+          },
+        ],
+        correct:' Peter Handke'
+      },
+      {
+        qid:91,
+        question:{
+          text:"Who won the Miss World 2019 beauty pageant?",
+          image:0
+        },
+        option:[
+          {
+            text:'Toni-Ann Singh',
+            image:0
+          },
+          {
+            text:' Suman Rao',
+            image:0
+          },
+          {
+            text:'Vanessa Ponce de Leon',
+            image:0
+          },
+          {
+            text:'Manushi Chillar ',
+            image:0
+          },
+        ],
+        correct:'Toni-Ann Singh'
+      },
+      {
+        qid:92,
+        question:{
+          text:"What is the tenure of the Chief Election Commissioner of India?",
+          image:0
+        },
+        option:[
+          {
+            text:'4 years or up to the age of 65 years, whichever is earlier. ',
+            image:0
+          },
+          {
+            text:'3 years or up to the age of 65 years, whichever is earlier.',
+            image:0
+          },
+          {
+            text:'5 years or up to the age of 65 years, whichever is earlier.',
+            image:0
+          },
+          {
+            text:'6 years or up to the age of 65 years, whichever is earlier.',
+            image:0
+          },
+        ],
+        correct:'6 years or up to the age of 65 years, whichever is earlier.'
+      },
+      {
+        qid:93,
+        question:{
+          text:"Linux is ______.",
+          image:0
+        },
+        option:[
+          {
+            text:'an operating system',
+            image:0
+          },
+          {
+            text:'an assembly language',
+            image:0
+          },
+          {
+            text:'a high level language',
+            image:0
+          },
+          {
+            text:'an interpreter',
+            image:0
+          },
+        ],
+        correct:'an operating system'
+      },
+      {
+        qid:94,
+        question:{
+          text:"Which tissue has heavily thickened lignified walls?",
+          image:0
+        },
+        option:[
+          {
+            text:'Sclerenchyma',
+            image:0
+          },
+          {
+            text:'Parenchyma',
+            image:0
+          },
+          {
+            text:'Aerenchyma',
+            image:0
+          },
+          {
+            text:'Collenchyma',
+            image:0
+          },
+        ],
+        correct:'Sclerenchyma'
+      },
+      {
+        qid:95,
+        question:{
+          text:"The concept of fundamental duties in the Constitution of India was taken from:",
+          image:0
+        },
+        option:[
+          {
+            text:'USSR',
+            image:0
+          },
+          {
+            text:'USA',
+            image:0
+          },
+          {
+            text:'Germany',
+            image:0
+          },
+          {
+            text:'Australia',
+            image:0
+          },
+        ],
+        correct:'USSR'
+      },
+      {
+        qid:96,
+        question:{
+          text:"The term 'white revolution' is related with:",
+          image:0
+        },
+        option:[
+          {
+            text:'crops',
+            image:0
+          },
+          {
+            text:'fish',
+            image:0
+          },
+          {
+            text:'milk',
+            image:0
+          },
+          {
+            text:'egg',
+            image:0
+          },
+        ],
+        correct:'milk'
+      },
+      {
+        qid:97,
+        question:{
+          text:"Which country publishes the Wisden Cricketers’ Almanack - often labelled the ‘Bible of cricket’?",
+          image:0
+        },
+        option:[
+          {
+            text:'Australia',
+            image:0
+          },
+          {
+            text:'South Africa',
+            image:0
+          },
+          {
+            text:'New Zealand',
+            image:0
+          },
+          {
+            text:'United Kingdom',
+            image:0
+          },
+        ],
+        correct:'United Kingdom'
+      },
+      {
+        qid:98,
+        question:{
+          text:"Dhimsa is an official folk dance of which state?",
+          image:0
+        },
+        option:[
+          {
+            text:'Karnataka',
+            image:0
+          },
+          {
+            text:'Maharashtra',
+            image:0
+          },
+          {
+            text:'Andhra Pradesh',
+            image:0
+          },
+          {
+            text:'Rajasthan',
+            image:0
+          },
+        ],
+        correct:'Andhra Pradesh'
+      },
+      {
+        qid:99,
+        question:{
+          text:"Which of the following is an example of a pair of Isobars?",
+          image:0
+        },
+        option:[
+          {
+            text:'Chlorine and oxygen',
+            image:0
+          },
+          {
+            text:'Calcium and argon',
+            image:0
+          },
+          {
+            text:'Oxygen and carbon',
+            image:0
+          },
+          {
+            text:'Hydrogen and helium',
+            image:0
+          },
+        ],
+        correct:'Calcium and argon'
+      },
+      {
+        qid:100,
+        question:{
+          text:"Which country ranked first among 97 countries in breastfeeding rate, according to a new survey conducted by the World Breastfeeding Trends Initiative (WBTi)?",
+          image:0
+        },
+        option:[
+          {
+            text:'Sri Lanka',
+            image:0
+          },
+          {
+            text:'India',
+            image:0
+          },
+          {
+            text:'China',
+            image:0
+          },
+          {
+            text:'Japan',
+            image:0
+          },
+        ],
+        correct:'Sri Lanka'
+      },
     ]
     return questions
   }
